@@ -14,3 +14,15 @@ x_batch = x_train[batch_mask]
 t_batch = t_train[batch_mask]
 
 print(np.random.choice(60000,10))
+
+#任意のバッチサイズの出力と正解ラベル
+#との交差エントロピー誤差の平均を求める
+def cross_entropy_error(y,t):
+    if y.ndim == 1:
+        t = t.reshape(1,t.size)
+        y = y.reshape(1,y.size)
+    batch_size = y.shape[0]
+    return -np.sum(np.log(y[np.arange(batch_size),t] + 0.0000001)) / batch_size
+
+
+    
