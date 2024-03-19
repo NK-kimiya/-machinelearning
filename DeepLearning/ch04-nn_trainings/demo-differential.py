@@ -99,6 +99,6 @@ print(gradient_descent(function_2,init_x=init_x,lr=0.1,step_num=100))
         #学習が大きすぎる例
 init_x = np.array([-3.0,4.0])
 print(gradient_descent(function_2,init_x=init_x,lr=10.0,step_num=100))
-        #学習率が小さすぎる
+        #学習率が小さすぎる例
 init_x = np.array([-3.0,4.0])
 print(gradient_descent(function_2,init_x=init_x,lr=0.0000000001,step_num=100))
