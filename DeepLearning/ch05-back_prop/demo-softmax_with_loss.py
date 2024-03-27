@@ -1,6 +1,8 @@
+#from ..common import functions
 import sys
 import os
-from ..common import functions
+sys.path.append(os.pardir)
+from common import functions
 
 class SoftmaxWithLoss:
     def __init__(self):
